@@ -32,9 +32,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-if (app.get('env') === 'development') {
-  app.use(require('connect-livereload')({ port: 35728 }));
-}
+// if (app.get('env') === 'development') {
+//   app.use(require('connect-livereload')({ port: 35728 }));
+// }
 
 app.use('/', routes);
 app.use('/users', users);
